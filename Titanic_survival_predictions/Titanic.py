@@ -5,7 +5,7 @@ from sklearn.model_selection import train_test_split
 from sklearn.impute import SimpleImputer
 
 
-features = ['Pclass', 'Sex', 'Age', 'Fare', 'Embarked', 'SibSp', 'Parch']
+features = ['Pclass', 'Sex' ] #, 'Age', 'Fare', 'Embarked', 'SibSp', 'Parch']
 
 # fetching training Data
 data = pd.read_csv("train.csv")
@@ -19,10 +19,10 @@ test_X = test_data[features]
 
 
 X.Sex.replace(to_replace=dict(female=1, male=0), inplace=True)
-X.Embarked.replace(to_replace=dict(S=1, C=0, Q=2), inplace=True)
+#X.Embarked.replace(to_replace=dict(S=1, C=0, Q=2), inplace=True)
 
 test_X.Sex.replace(to_replace=dict(female=1, male=0), inplace=True)
-test_X.Embarked.replace(to_replace=dict(S=1, C=0, Q=2), inplace=True)
+#test_X.Embarked.replace(to_replace=dict(S=1, C=0, Q=2), inplace=True)
 
 
 # Find some columns with missing values in your dataset.
